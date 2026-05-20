@@ -1,58 +1,30 @@
-# Simple Notepad Application
+# 💬 Simple Chat Application
 
-A feature-rich Notepad application built with JavaFX and MySQL database storage using XAMPP.
+A real-time chat application built with Java and JavaFX featuring private messaging and file sharing.
 
-## Features
+## ✨ Features
 
-- ✅ **Create, Read, Update, Delete** notes
-- ✅ **MySQL Database** storage (XAMPP)
-- ✅ **Character Count** - Live character counter
-- ✅ **Dark/Light Theme** toggle
-- ✅ **Font Formatting** - Font size, Bold, Italic
-- ✅ **Text Color** picker
-- ✅ **Search** notes by title or content
-- ✅ **Keyboard Shortcuts** (Ctrl+S, Ctrl+B, Ctrl+I)
-- ✅ **Auto-save** to database
-- ✅ **Responsive UI** with toolbar and status bar
+- 💬 **Real-time messaging** - Send and receive messages instantly
+- 👥 **Online users list** - See who's currently online
+- 🔒 **Private messaging** - Send private messages using @username
+- 📎 **File sharing** - Send and receive files between users
+- 🎨 **Modern UI** - Clean interface with pink theme
+- 🚀 **Multi-client support** - Multiple users can chat simultaneously
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-- **Java** - Core programming language
-- **JavaFX** - GUI framework
-- **MySQL** - Database (via XAMPP)
-- **JDBC** - Database connectivity
+- Java (JDK 11 or higher)
+- JavaFX for GUI
+- Socket programming for networking
+- Multi-threading for concurrent clients
 
 ## 📋 Prerequisites
 
-Before running the application, make sure you have:
+- **Java JDK 11+** - [Download here](https://www.oracle.com/java/technologies/downloads/)
+- **JavaFX SDK** - [Download here](https://gluonhq.com/products/javafx/)
+- **Git** (optional, for cloning)
 
-1. **Java JDK 17 or higher** installed
-2. **JavaFX SDK** (JARs included in `lib/javafx-lib/`)
-3. **XAMPP** with MySQL running
-4. **MySQL Connector/J** (included in `lib/`)
-
-## Database Setup (One-Time)
-
-### 1. Start XAMPP MySQL
-- Open XAMPP Control Panel
-- Start MySQL service
-
-### 2. Create Database
-Open http://localhost/phpmyadmin and run:
-
-```sql
-CREATE DATABASE IF NOT EXISTS notepad_db;
-USE notepad_db;
-
-CREATE TABLE IF NOT EXISTS notes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    content TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
-##  How to Run
-
-### Step 1: Compile
+### Verify Java Installation
 ```bash
-javac -cp "lib\mysql-connector-j-9.7.0.jar;lib\javafx-lib\*" -d bin src\notepad\*.java
+java --version
+javac --version
